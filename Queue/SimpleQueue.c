@@ -98,23 +98,23 @@ int deque(struct Queue *q)
     return(data);
 }
 int main()
-{   struct Queue q;
-    initializeQueue(&q);
-    enque(&q,1);
-    enque(&q,2);
-    enque(&q,3);
-    printList(q.list);
-    deque(&q);
-    printList(q.list);
-    deque(&q);
-    enque(&q,5);
-    printList(q.list);
-    deque(&q);
-    printList(q.list);
-    deque(&q);
-    printList(q.list);
-    deque(&q);
-    printList(q.list);
+{   struct Queue *q=(struct Queue*)malloc(sizeof(struct Queue));
+    initializeQueue(q);
+    enque(q,1);
+    enque(q,2);
+    enque(q,3);
+    printList(q->list);
+    deque(q);
+    printList(q->list);
+    deque(q);
+    enque(q,5);
+    printList(q->list);
+    deque(q);
+    printList(q->list);
+    deque(q);
+    printList(q->list);
+    deque(q);
+    printList(q->list);
 
     return 0;
 }
